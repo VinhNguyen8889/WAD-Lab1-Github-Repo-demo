@@ -1,0 +1,47 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      class Dog {
+        constructor(dname, dage) {
+          this.dname = dname;
+          this.dage = dage;
+        }
+        bark() {
+          alert(this.dname);
+        }
+      }
+      class BullDog extends Dog {
+        constructor(dname, dage, dbreed = "BullDog") {
+          super(dname, dage);
+          this.age = 25; //overwrite parent class value
+          this.dbreed = dbreed;
+        }
+      }
+      var dog = new Dog("abc", 5);
+      var dog1 = new BullDog("xyz", 8); //third parameter is default parameter
+      dog1.bark();
+      document.write("Dog name is :" + dog.dname + "   and Age is:" + dog.dage);
+    </script>
+    <hr />
+    <script>
+      class Employee {
+        constructor(id, name, division) {
+          this.id = id;
+          this.name = name;
+          this.division = division;
+        }
+        login = () => {
+          console.log(this.name + "has logged in");
+        };
+        static printdate() {
+          console.log(new Date());
+        }
+      }
+
+      Employee.printdate();
+      let emp = new Employee(1, "abc", "hr");
+      emp.login();
+    </script>
+  </body>
+</html>

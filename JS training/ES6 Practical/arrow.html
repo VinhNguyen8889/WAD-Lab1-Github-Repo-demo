@@ -1,0 +1,37 @@
+!<!DOCTYPE html>
+<body>
+<script>
+const courses= ["java", "js", "c","python"];
+const site ="myString";
+
+//const newArr=courses.map(function(course){
+ //return { course:`${course}`, site:`${site}`, year :`2018`};
+//});
+//console.table(newArr);
+
+//Arrow function
+const newArr=courses.map(course =>({
+ course:`${course}`, site:`${site}`, year :`2018`
+}));
+console.table(newArr);
+
+function add(x,y){
+        return x+y;
+}
+
+const add1=(x,y)=>{
+    
+ x+y;
+}
+add1(10,15);
+
+function printname(name="NodeJS", year=2015){
+    console.log(name);
+    console.log(year);
+}
+printname("java", undefined);
+
+</script>
+</body>
+</html>
+

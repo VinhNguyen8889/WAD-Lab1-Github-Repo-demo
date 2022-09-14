@@ -1,0 +1,26 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      class Person {
+        constructor(uname, uage) {
+          this.name = uname;
+          this.age = uage;
+        }
+        details() {
+          console.log(this.name);
+          console.log(this.age);
+        }
+      }
+
+      var p = new Person("Zoh", 11);
+      p.details();
+      var q = new Person("Mac", 12);
+      document.write("My name is :" + p.name + "and Age is:" + p.age);
+    </script>
+    <hr />
+    <script>
+      document.write(q.name);
+    </script>
+  </body>
+</html>

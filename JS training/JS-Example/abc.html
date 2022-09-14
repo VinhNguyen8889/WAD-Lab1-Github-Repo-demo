@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Callback function example
+        function greet(name, myFunction){
+            console.log('Hello World');
+
+            //callback function
+            //executed only after the greet() is executed
+
+            myFunction(name);
+        }
+
+        //callback Function
+        function sayName(name){
+            console.log('Hello' + ' ' + name);
+        }
+
+        //calling hte function after 2 seconds
+        setTimeout(greet, 2000, 'John', sayName);
+
+    </script>
+    
+</body>
+</html>
